@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Professional Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="Estilos.css"> <!-- Vinculamos el archivo CSS externo -->
+    <link rel="stylesheet" href="style.css"> <!-- Vinculamos el archivo CSS externo -->
 </head>
 <body class="bg-gradient-to-r from-gray-900 to-black text-white flex items-center justify-center min-h-screen"
       oncopy="return false" onpaste="return false" oncut="return false" ondragstart="return false" oncontextmenu="return false">
@@ -103,7 +103,7 @@
                 </button>
 
                 <!-- Botón de Descargar CV -->
-                <a id="descargar-cv" href="C:\Users\51936\Downloads\hola\Paginas web principal\CV EDY REYES - DOCUMENTADO.pdf" download="CV EDY REYES - DOCUMENTADO.pdf"
+                <a id="descargar-cv" href="C:\Users\51936\Downloads\hola\Paginas web principal\CV EDY REYES - 2025.pdf" download="CV EDY REYES - 2025.pdf"
                    class="custom-button descargar-cv">
                     📄 Descargar CV
                 </a>
@@ -117,37 +117,8 @@
                  class="w-full h-full object-cover rounded-full"
                  draggable="false">
         </div>
-
     </div>
-    <script>
-        function mostrarSobreMi() {
-            document.getElementById("main-content").classList.add("hidden");
-            document.getElementById("sobre-mi").classList.remove("hidden");
-        }
 
-        function ocultarSobreMi() {
-            document.getElementById("sobre-mi").classList.add("hidden");
-            document.getElementById("main-content").classList.remove("hidden");
-        }
-
-        // Deshabilitar copiar, pegar y cortar
-        document.addEventListener('copy', (e) => {
-            e.preventDefault();
-        });
-
-        document.addEventListener('paste', (e) => {
-            e.preventDefault();
-        });
-
-        document.addEventListener('cut', (e) => {
-            e.preventDefault();
-        });
-
-        // Deshabilitar menú contextual (clic derecho)
-        document.addEventListener('contextmenu', (e) => {
-            e.preventDefault();
-        });
-    </script>
-
+    <script src="scritp.js"></script>
 </body>
 </html>
