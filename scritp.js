@@ -25,3 +25,26 @@ document.addEventListener('cut', (e) => {
 document.addEventListener('contextmenu', (e) => {
     e.preventDefault();
 });
+
+// Logica del modal de descarga de CV
+function abrirModal() {
+    const modal = document.getElementById("modal-cv");
+    modal.classList.remove("hidden");
+    // Evita que se pueda hacer scroll al fondo mientras el modal está abierto
+    document.body.style.overflow = "hidden";
+}
+
+function cerrarModal() {
+    const modal = document.getElementById("modal-cv");
+    modal.classList.add("hidden");
+    // Devuelve el scroll normal
+    document.body.style.overflow = "auto";
+}
+
+// Opcional: Cerrar el modal si el usuario hace clic fuera del cuadro gris
+window.onclick = function(event) {
+    const modal = document.getElementById("modal-cv");
+    if (event.target == modal) {
+        cerrarModal();
+    }
+}
