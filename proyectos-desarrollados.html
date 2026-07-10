@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos Desarrollados - Edy Omar Reyes</title>
+    <link rel="icon" type="image/png" href="img/Layers_light.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/proyectos-desarrollados.css">
+</head>
+<body class="light-mode">
+
+    <!-- Navegación -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>Edy Omar <span>Reyes</span></h1>
+                <p>Desarrollador Backend / Full Stack</p>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#perfil">Perfil</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <button class="theme-toggle" id="theme-toggle" title="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Portafolio de <span class="highlight">Proyectos</span></h2>
+                <p>Explora mis trabajos más destacados como desarrollador backend/full stack, especializado en Laravel, PHP, APIs REST y bases de datos SQL. Cada proyecto representa un desafío superado y una solución innovadora.</p>
+                <a href="#proyectos" class="btn-primary">Ver Proyectos</a>
+            </div>
+            <div class="hero-image">
+                <div class="code-snippet">
+                    <pre><code>// Código de ejemplo
+public function proyectosDestacados() {
+    $proyectos = [
+        'Sistema de gestión' => 'Laravel + MySQL',
+        'API REST' => 'PHP + JWT',
+        'E-commerce' => 'Laravel + Vue.js',
+        'Panel administrativo' => 'Livewire + Tailwind'
+    ];
+    
+    return view('portafolio', compact('proyectos'));
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Sección Perfil / Experiencia -->
+    <section id="perfil" class="perfil-section">
+        <div class="container">
+            <h2 class="section-title">Perfil y <span>Experiencia</span></h2>
+            <p class="section-subtitle">Mi trayectoria profesional, formación y competencias</p>
+            
+            <div class="perfil-grid">
+                <!-- Columna Izquierda: Perfil, Formación y Soft Skills -->
+                <div class="perfil-col-left">
+                    <div class="perfil-card">
+                        <h3><i class="fas fa-user"></i> Perfil Profesional</h3>
+                        <p>Desarrollador Backend / Full Stack con experiencia en el desarrollo de aplicaciones web y móviles escalables utilizando Laravel, Node.js, NestJS, React, Next.js y React Native. Especializado en el desarrollo de APIs REST, diseño y optimización de bases de datos e integración de servicios de terceros. He contribuido a incrementar la estabilidad y seguridad de plataformas en un 50% y a reducir tiempos de inactividad en un 70%. Apasionado por el código limpio, el rendimiento, la seguridad y la mejora continua.</p>
+                        <div class="cv-btn-container">
+                            <button onclick="abrirModalCV()" class="btn-cv"><i class="fas fa-file-download"></i> Descargar CV</button>
+                        </div>
+                    </div>
+                    
+                    <div class="perfil-card">
+                        <h3><i class="fas fa-graduation-cap"></i> Formación Académica y Certificaciones</h3>
+                        <div class="formacion-list">
+                            <div class="formacion-item">
+                                <div class="formacion-icon"><i class="fas fa-university"></i></div>
+                                <div class="formacion-details">
+                                    <h4>Carrera Técnica en Computación e Informática</h4>
+                                    <p>ISTP Jose Pardo 2023 – 2025 | Lima, Perú</p>
+                                </div>
+                            </div>
+                            <div class="formacion-item">
+                                <div class="formacion-icon"><i class="fas fa-certificate"></i></div>
+                                <div class="formacion-details">
+                                    <h4>Gestión de Proyectos</h4>
+                                    <p>Pontificia Universidad Católica del Perú</p>
+                                </div>
+                            </div>
+                            <div class="formacion-item">
+                                <div class="formacion-icon"><i class="fas fa-code-branch"></i></div>
+                                <div class="formacion-details">
+                                    <h4>Desarrollo Web y Desarrollo de Software</h4>
+                                    <p>Platzi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="perfil-card">
+                        <h3><i class="fas fa-brain"></i> Competencias</h3>
+                        <div class="soft-skills-container">
+                            <span class="soft-skill-badge"><i class="fas fa-check"></i> Proactividad y autonomía</span>
+                            <span class="soft-skill-badge"><i class="fas fa-check"></i> Resolución de problemas</span>
+                            <span class="soft-skill-badge"><i class="fas fa-check"></i> Comunicación técnica efectiva</span>
+                            <span class="soft-skill-badge"><i class="fas fa-check"></i> Trabajo en equipo</span>
+                            <span class="soft-skill-badge"><i class="fas fa-check"></i> Adaptabilidad tecnológica</span>
+                            <span class="soft-skill-badge"><i class="fas fa-check"></i> Responsabilidad y cumplimiento</span>
+                            <span class="soft-skill-badge"><i class="fas fa-check"></i> Buenas prácticas de desarrollo</span>
+                            <span class="soft-skill-badge"><i class="fas fa-check"></i> Calidad de código</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Columna Derecha: Experiencia Laboral -->
+                <div class="perfil-col-right">
+                    <div class="perfil-card">
+                        <h3><i class="fas fa-briefcase"></i> Experiencia Laboral</h3>
+                        <div class="experience-timeline">
+                            <div class="timeline-block">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-header">
+                                    <span class="timeline-date"><i class="far fa-calendar-alt"></i> Enero 2026 - Actualidad</span>
+                                    <h4>Desarrollador Full Stack</h4>
+                                    <h5>NEOWB S.A.C.</h5>
+                                </div>
+                                <div class="timeline-body">
+                                    <ul>
+                                        <li>Desarrollo de aplicaciones web escalables utilizando Laravel, PHP y tecnologías frontend modernas.</li>
+                                        <li>Diseño, optimización y mantenimiento de bases de datos relacionales.</li>
+                                        <li>Desarrollo e integración de APIs REST y servicios de terceros.</li>
+                                        <li>Incrementé en un 50% la estabilidad y seguridad de las plataformas mediante mejoras en código y arquitectura.</li>
+                                        <li>Participación en todo el ciclo de vida del desarrollo de software (análisis, diseño, desarrollo, pruebas y despliegue).</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-block">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-header">
+                                    <span class="timeline-date"><i class="far fa-calendar-alt"></i> Agosto 2024 – Enero 2025</span>
+                                    <h4>Practicante de Sistemas y Redes</h4>
+                                    <h5>INORGE S.A.C.</h5>
+                                </div>
+                                <div class="timeline-body">
+                                    <ul>
+                                        <li>Monitoreo de servicios críticos mediante herramientas de Help Desk.</li>
+                                        <li>Mantenimiento preventivo y correctivo de hardware y software.</li>
+                                        <li>Reduje en un 70% los tiempos de inactividad mediante mejoras en los procesos de soporte.</li>
+                                        <li>Apoyo en la implementación de controles básicos de seguridad informática y coordinación con proveedores tecnológicos.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="perfil-card" style="margin-top: 30px;">
+                        <h3><i class="fas fa-trophy"></i> Logros Destacados</h3>
+                        <div class="timeline-body" style="padding-left: 0; padding-top: 15px;">
+                            <ul style="padding-left: 20px;">
+                                <li style="margin-bottom: 10px; color: var(--medium-gray);">Incremento del 50% en la estabilidad y seguridad de plataformas web.</li>
+                                <li style="margin-bottom: 10px; color: var(--medium-gray);">Reducción del 70% en tiempos de inactividad mediante mejoras en soporte técnico.</li>
+                                <li style="margin-bottom: 10px; color: var(--medium-gray);">Desarrollo de APIs REST escalables e integración de servicios de terceros.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="proyectos">
+        <div class="container">
+            <h2 class="section-title">Proyectos <span>Desarrollados</span></h2>
+            <p class="section-subtitle">Una selección de mis trabajos más relevantes</p>
+            
+            <!-- Filtros de proyectos -->
+            <div class="filtros">
+                <button class="filtro-btn active" data-categoria="todos">Todos</button>
+                <button class="filtro-btn" data-categoria="laravel">Laravel</button>
+                <button class="filtro-btn" data-categoria="php">PHP</button>
+                <button class="filtro-btn" data-categoria="javascript">JavaScript</button>
+                <button class="filtro-btn" data-categoria="fullstack">Full Stack</button>
+            </div>
+            
+            <!-- Grid de proyectos -->
+            <div class="proyectos-grid">
+                <!-- Proyecto 1 -->
+                <div class="proyecto-card" data-categoria="laravel fullstack">
+                    <div class="proyecto-imagen">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sistema de Gestión">
+                        <div class="proyecto-tags">
+                            <span class="tag laravel">Laravel</span>
+                            <span class="tag mysql">MySQL</span>
+                            <span class="tag bootstrap">Bootstrap</span>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Sistema de Gestión Empresarial</h3>
+                        <p>Sistema integral para la gestión de inventario, ventas y reportes financieros. Desarrollado con Laravel 9, MySQL y Bootstrap 5.</p>
+                        <div class="proyecto-tech">
+                            <i class="fab fa-laravel"></i>
+                            <i class="fas fa-database"></i>
+                            <i class="fab fa-php"></i>
+                        </div>
+                        <div class="proyecto-acciones">
+                            <a href="proyectos-por-desarrollar.html" class="btn-detalles" style="text-decoration: none; text-align: center; display: inline-block;">Ver Detalles</a>
+                            <a href="proyectos-por-desarrollar.html" class="btn-codigo">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 2 -->
+                <div class="proyecto-card" data-categoria="php javascript">
+                    <div class="proyecto-imagen">
+                        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="API REST">
+                        <div class="proyecto-tags">
+                            <span class="tag php">PHP</span>
+                            <span class="tag api">API REST</span>
+                            <span class="tag jwt">JWT</span>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>API REST para E-commerce</h3>
+                        <p>API robusta con autenticación JWT, documentación Swagger y endpoints para gestión de productos, usuarios y pedidos.</p>
+                        <div class="proyecto-tech">
+                            <i class="fab fa-php"></i>
+                            <i class="fas fa-server"></i>
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="proyecto-acciones">
+                            <a href="proyectos-por-desarrollar.html" class="btn-detalles" style="text-decoration: none; text-align: center; display: inline-block;">Ver Detalles</a>
+                            <a href="proyectos-por-desarrollar.html" class="btn-codigo">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 3 -->
+                <div class="proyecto-card" data-categoria="laravel fullstack">
+                    <div class="proyecto-imagen">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Plataforma E-learning">
+                        <div class="proyecto-tags">
+                            <span class="tag laravel">Laravel</span>
+                            <span class="tag vue">Vue.js</span>
+                            <span class="tag tailwind">Tailwind</span>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Plataforma de E-learning</h3>
+                        <p>Plataforma educativa con cursos en línea, sistema de evaluaciones y panel de administración. Laravel 10 + Vue.js 3.</p>
+                        <div class="proyecto-tech">
+                            <i class="fab fa-laravel"></i>
+                            <i class="fab fa-vuejs"></i>
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="proyecto-acciones">
+                            <a href="proyectos-por-desarrollar.html" class="btn-detalles" style="text-decoration: none; text-align: center; display: inline-block;">Ver Detalles</a>
+                            <a href="proyectos-por-desarrollar.html" class="btn-codigo">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 4 -->
+                <div class="proyecto-card" data-categoria="javascript php">
+                    <div class="proyecto-imagen">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Sistema de Tickets">
+                        <div class="proyecto-tags">
+                            <span class="tag javascript">JavaScript</span>
+                            <span class="tag php">PHP</span>
+                            <span class="tag mysql">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Sistema de Tickets de Soporte</h3>
+                        <p>Sistema de gestión de tickets con notificaciones en tiempo real, historial de conversaciones y dashboard administrativo.</p>
+                        <div class="proyecto-tech">
+                            <i class="fab fa-js-square"></i>
+                            <i class="fab fa-php"></i>
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="proyecto-acciones">
+                            <a href="proyectos-por-desarrollar.html" class="btn-detalles" style="text-decoration: none; text-align: center; display: inline-block;">Ver Detalles</a>
+                            <a href="proyectos-por-desarrollar.html" class="btn-codigo">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 5 -->
+                <div class="proyecto-card" data-categoria="laravel javascript">
+                    <div class="proyecto-imagen">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog Personalizado">
+                        <div class="proyecto-tags">
+                            <span class="tag laravel">Laravel</span>
+                            <span class="tag javascript">JavaScript</span>
+                            <span class="tag mysql">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>CMS para Blog Personalizado</h3>
+                        <p>Sistema de gestión de contenidos con editor enriquecido, categorías, etiquetas y sistema de comentarios.</p>
+                        <div class="proyecto-tech">
+                            <i class="fab fa-laravel"></i>
+                            <i class="fab fa-js-square"></i>
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="proyecto-acciones">
+                            <a href="proyectos-por-desarrollar.html" class="btn-detalles" style="text-decoration: none; text-align: center; display: inline-block;">Ver Detalles</a>
+                            <a href="proyectos-por-desarrollar.html" class="btn-codigo">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proyecto 6 -->
+                <div class="proyecto-card" data-categoria="php fullstack">
+                    <div class="proyecto-imagen">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Aplicación de Tareas">
+                        <div class="proyecto-tags">
+                            <span class="tag php">PHP</span>
+                            <span class="tag ajax">AJAX</span>
+                            <span class="tag mysql">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3>Aplicación de Gestión de Tareas</h3>
+                        <p>Aplicación web para gestión de proyectos y tareas con interfaz drag & drop, prioridades y fechas de vencimiento.</p>
+                        <div class="proyecto-tech">
+                            <i class="fab fa-php"></i>
+                            <i class="fab fa-js-square"></i>
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="proyecto-acciones">
+                            <a href="proyectos-por-desarrollar.html" class="btn-detalles" style="text-decoration: none; text-align: center; display: inline-block;">Ver Detalles</a>
+                            <a href="proyectos-por-desarrollar.html" class="btn-codigo">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de detalles del proyecto -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2 id="modal-titulo">Detalles del Proyecto</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-imagen">
+                    <img id="modal-img" src="" alt="Proyecto">
+                </div>
+                <div class="modal-contenido">
+                    <h3 id="modal-nombre">Nombre del Proyecto</h3>
+                    <p id="modal-descripcion">Descripción detallada del proyecto.</p>
+                    <div class="modal-tags" id="modal-tags"></div>
+                    <div class="modal-caracteristicas">
+                        <h4>Características principales:</h4>
+                        <ul id="modal-caracteristicas"></ul>
+                    </div>
+                    <div class="modal-tech">
+                        <h4>Tecnologías utilizadas:</h4>
+                        <div id="modal-tecnologias"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" id="modal-demo" class="btn-primary" target="_blank">Ver Demo</a>
+                <a href="#" id="modal-github" class="btn-secondary" target="_blank">
+                    <i class="fab fa-github"></i> Ver Código
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Selección Idioma CV -->
+    <div id="modal-cv" class="modal-overlay">
+        <div class="modal-container modal-small">
+            <div class="modal-header">
+                <h2>¿Cómo deseas descargar el CV?</h2>
+                <button onclick="cerrarModalCV()" class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body select-cv-body">
+                <p>Elige el idioma del documento que deseas guardar:</p>
+                <div class="cv-options-grid">
+                    <button onclick="descargarCV('es')" class="btn-download-option es">
+                        <span class="flag-icon">🇪🇸</span>
+                        <span class="lang-name">Español</span>
+                    </button>
+                    <button onclick="descargarCV('en')" class="btn-download-option en">
+                        <span class="flag-icon">🇺🇸</span>
+                        <span class="lang-name">English</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Agradecimiento -->
+    <div id="modal-gracias" class="modal-overlay">
+        <div class="modal-container modal-small">
+            <div class="modal-header">
+                <h2>¡Muchas Gracias!</h2>
+                <button onclick="cerrarModalGracias()" class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body gracias-body">
+                <div class="gracias-icon"><i class="fas fa-heart"></i></div>
+                <p class="gracias-text">¡Tu descarga ha comenzado! Aprecio mucho tu interés en mi perfil profesional. Espero que podamos ponernos en contacto pronto para conversar sobre cómo mis conocimientos en desarrollo y sistemas pueden aportar valor a tus próximos proyectos.</p>
+                <div class="gracias-footer">
+                    <button onclick="cerrarModalGracias()" class="btn-primary">Aceptar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección Habilidades -->
+    <section id="habilidades" class="habilidades">
+        <div class="container">
+            <h2 class="section-title">Mis <span>Habilidades</span></h2>
+            <p class="section-subtitle">Tecnologías y herramientas que domino</p>
+            
+            <div class="habilidades-grid">
+                <div class="habilidad-categoria">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <div class="soft-skills-container" style="margin-top: 20px;">
+                        <span class="soft-skill-badge">Node.js</span>
+                        <span class="soft-skill-badge">Express.js</span>
+                        <span class="soft-skill-badge">NestJS</span>
+                        <span class="soft-skill-badge">Laravel</span>
+                        <span class="soft-skill-badge">PHP</span>
+                    </div>
+                </div>
+                
+                <div class="habilidad-categoria">
+                    <h3><i class="fas fa-code"></i> Frontend</h3>
+                    <div class="soft-skills-container" style="margin-top: 20px;">
+                        <span class="soft-skill-badge">React</span>
+                        <span class="soft-skill-badge">Next.js</span>
+                        <span class="soft-skill-badge">TypeScript</span>
+                        <span class="soft-skill-badge">Tailwind CSS</span>
+                        <span class="soft-skill-badge">HTML5</span>
+                        <span class="soft-skill-badge">CSS3</span>
+                    </div>
+                </div>
+                
+                <div class="habilidad-categoria">
+                    <h3><i class="fas fa-mobile-alt"></i> Desarrollo Móvil</h3>
+                    <div class="soft-skills-container" style="margin-top: 20px;">
+                        <span class="soft-skill-badge">React Native</span>
+                        <span class="soft-skill-badge">Expo</span>
+                    </div>
+                </div>
+
+                <div class="habilidad-categoria">
+                    <h3><i class="fas fa-laptop-code"></i> Lenguajes de Programación</h3>
+                    <div class="soft-skills-container" style="margin-top: 20px;">
+                        <span class="soft-skill-badge">PHP</span>
+                        <span class="soft-skill-badge">JavaScript</span>
+                        <span class="soft-skill-badge">TypeScript</span>
+                        <span class="soft-skill-badge">Python</span>
+                        <span class="soft-skill-badge">C#</span>
+                    </div>
+                </div>
+                
+                <div class="habilidad-categoria">
+                    <h3><i class="fas fa-database"></i> Bases de Datos</h3>
+                    <div class="soft-skills-container" style="margin-top: 20px;">
+                        <span class="soft-skill-badge">SQL Server</span>
+                        <span class="soft-skill-badge">Firebase</span>
+                    </div>
+                </div>
+
+                <div class="habilidad-categoria">
+                    <h3><i class="fas fa-plug"></i> Servicios e Integraciones</h3>
+                    <div class="soft-skills-container" style="margin-top: 20px;">
+                        <span class="soft-skill-badge">APIs REST</span>
+                        <span class="soft-skill-badge">Firebase</span>
+                        <span class="soft-skill-badge">Google Maps API</span>
+                        <span class="soft-skill-badge">Stripe</span>
+                        <span class="soft-skill-badge">Mercado Pago</span>
+                        <span class="soft-skill-badge">WhatsApp API</span>
+                    </div>
+                </div>
+
+                <div class="habilidad-categoria">
+                    <h3><i class="fas fa-tools"></i> Herramientas</h3>
+                    <div class="soft-skills-container" style="margin-top: 20px;">
+                        <span class="soft-skill-badge">Git</span>
+                        <span class="soft-skill-badge">GitHub</span>
+                        <span class="soft-skill-badge">Postman</span>
+                        <span class="soft-skill-badge">Visual Studio Code</span>
+                        <span class="soft-skill-badge">Soporte técnico</span>
+                        <span class="soft-skill-badge">Ciberseguridad básica</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2 class="section-title">Contácta<span>me</span></h2>
+            <p class="section-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+            
+            <div class="contacto-container">
+                <div class="contacto-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>edy.omar2005@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Ubicación</h3>
+                            <p>Lima, Perú</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Teléfono</h3>
+                            <p>936 611 471</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <div>
+                            <h3>Formación</h3>
+                            <p>Profesional Técnico en Computación e Informática</p>
+                            <p class="small">Egresado 2025</p>
+                        </div>
+                    </div>
+                    
+                    <div class="redes-sociales">
+                        <a href="https://github.com/EdyOmar17?tab=repositories" target="_blank" class="red-social" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/reyeslorenaedy/" target="_blank" class="red-social" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:edy.omar2005@gmail.com" class="red-social" title="Correo Electrónico">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://wa.me/51936611472" target="_blank" class="red-social" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contacto-faq">
+                    <h3 style="margin-bottom: 20px; color: var(--primary-blue);">¿Por qué contratarme?</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>¿Por qué elegirme para tu equipo o proyecto?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Me especializo en crear arquitecturas robustas y código limpio. Mi enfoque no solo es hacer que las cosas funcionen, sino que sean escalables y fáciles de mantener a largo plazo.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>¿Qué impacto real puedo generar en tu empresa?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>En proyectos anteriores he logrado incrementar la estabilidad de plataformas en un 50% y reducir los tiempos de inactividad en un 70%. Me enfoco en optimizar recursos, mejorar el rendimiento y garantizar la seguridad en cada entrega.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>¿Con qué ecosistema tecnológico me siento más cómodo?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Domino tanto el Frontend como el Backend. En el lado del servidor trabajo con Node.js, NestJS, Laravel y C#; y en las interfaces de usuario con React, Next.js y React Native. Esto me permite tomar el control completo del ciclo de desarrollo.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>¿Cómo es mi dinámica y ética de trabajo?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Considero que la comunicación fluida es tan importante como el código. Soy proactivo, disfruto resolver problemas complejos de lógica de negocio y me mantengo en constante formación para aplicar las mejores prácticas del mercado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Edy Omar <span>Reyes</span></h2>
+                    <p>Desarrollador Backend / Full Stack</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#habilidades">Habilidades</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <p class="copyright">&copy; 2025 Edy Omar Reyes Lorena. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón para volver arriba -->
+    <button class="scroll-top" id="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Modal Notificación -->
+    <div class="modal-overlay" id="modal-notificacion">
+        <div class="modal-content">
+            <i class="fas fa-times modal-close" onclick="cerrarModalNotificacion()"></i>
+            <i class="fas fa-check-circle modal-icon" id="modal-notificacion-icon"></i>
+            <h3 id="modal-notificacion-title">¡Mensaje Enviado!</h3>
+            <p id="modal-notificacion-text">Gracias por contactarme, te responderé lo más pronto posible.</p>
+            <button class="btn-primary" onclick="cerrarModalNotificacion()">Aceptar</button>
+        </div>
+    </div>
+
+    <script src="js/proyectos-desarrollados.js"></script>
+</body>
+</html>
